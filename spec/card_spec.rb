@@ -21,4 +21,8 @@ RSpec.describe Card do
         card.rank = 'Queen'
         expect(card.rank).to eq('Queen')
     end
+    it 'has a custom error message' do
+        expected_result = 'Ace'
+        expect(card.rank).to eq(expected_result), "Expected #{expected_result} but found #{card.rank}."
+    end
 end
